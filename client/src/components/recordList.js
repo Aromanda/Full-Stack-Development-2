@@ -70,21 +70,24 @@ export default function RecordList() {
  
  // This following section will display the table with the records of individuals.
  return (
-   <div>
-     <h3>Agents List</h3>
-     <table className="table table-striped" style={{ marginTop: 20 }}>
-       <thead>
-         <tr>
-           <th>First Name</th>
-           <th>Last Name</th>
-           <th>Email</th>
-           <th>Region</th>
-           <th>Rating</th>
-           <th>Fee</th>
-         </tr>
-       </thead>
-       <tbody>{recordList()}</tbody>
-     </table>
-   </div>
- );
+  <div>
+    <h3 style={{ textAlign: 'center', marginTop: '40px', fontstyle: 'bold', color: 'blue'}}>Agents List</h3>
+    <div className="table-responsive">
+      <table className="table table-striped" style={{ marginTop: '40px' }}>
+        <thead className="thead-dark">
+          <tr>
+            <th style={{ color: 'blue'}}>First Name</th>
+            <th style={{ color: 'red'}}>Last Name</th>
+            <th style={{ color: 'blue'}}>Email</th>
+            <th style={{ color: 'red'}}>Region</th>
+            <th style={{ color: 'blue'}}>Rating</th>
+            <th style={{ color: 'red'}}>Fee</th>
+          </tr>
+        </thead>
+        <tbody>{recordList()}</tbody>
+      </table>
+    </div>
+  </div>
+);
+
 }
