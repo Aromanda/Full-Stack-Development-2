@@ -29,3 +29,13 @@
 6) Pourquoi MERN est un bon choix pour le développement complet ?
    MERN est un bon choix pour le developpement complet car on peut reutiliser la logique, on peut avoir une gestion efficace des composants grace a REACT,
    MERN utilise le virtual DOM qui otpimise la performance, et enfin la vaste communcauté qui utlise MERN permet de trouver des solutions en ligne.
+
+
+   Trouver et fournir 2 projets qui ont utilisé MERN et donner les avanatages: 
+1er Projet: git@github.com:adrianhajdin/project_mern_memories.git
+Ceci est un GIT qui permet d'utiliser MERN afin de batir un projet full stack du début à la fin.
+Ce projet ressemble grandement à notre projet de semaine que ce soit dans la structure, 2 côtés: client et serveur avec des composants et des routes.
+
+2eme projet: git@github.com:mongodb-developer/mern-stack-example.git
+C'est un autre projet qui ressemble aussi au notre dans le fond. On voit que la structure reste la même, juste à quelques différences près. 
+Comparer les projets permettent de s'améliorer et s'inspirer de la strcture des autres. 
