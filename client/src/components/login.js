@@ -32,15 +32,12 @@ export default function Login() {
         });
         if (response.status === 404) {
             navigate("/error");
-        } else if (response.ok) {
-          const data = await response.json();
-          if (data === "Not found") {
-            window.alert("User not found");
-            navigate("/error");
-          } else {
+        } else if (response.status === 204) {
             setForm({ email: "", password: "" });
             navigate("/recordList");
-          }
+          } 
+        else if (response.ok) {
+        //   const data = await response.json();
         } else {
           throw new Error("Request failed with status: " + response.status);
         }
