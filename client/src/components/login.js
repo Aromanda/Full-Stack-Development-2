@@ -48,7 +48,7 @@ export default function Login() {
     
     // This following section will display the form that takes input from the user to update the data.
     return (
-        <div style={{ textAlign: 'center', margin: '20px 500px', border: '2px solid #0D6EFD', padding: '20px' }}>
+        <div style={{ textAlign: 'center', margin: '20px 250px', border: '3px solid #0D6EFD', padding: '20px' }}>
   <Form onSubmit={onSubmit}>
     <div className="row justify-content-center">
       <div className="col-md-6">
