@@ -38,7 +38,7 @@ export default function Create() {
     });
   
     setForm({ first_name: "", last_name: "", email: "", rating: "", fee: "" });
-    navigate("/");
+    navigate("/recordList");
   }
  
  // This following section will display the form that takes the input from the user.
