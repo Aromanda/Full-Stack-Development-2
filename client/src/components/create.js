@@ -76,16 +76,6 @@ export default function Create() {
            onChange={(e) => updateForm({ email: e.target.value })}
          />
        </div>
-       {/* <div className="form-group">
-         <label htmlFor="region">Region</label>
-         <input
-           type="text"
-           className="form-control"
-           id="region"
-           value={form.region}
-           onChange={(e) => updateForm({ region: e.target.value })}
-         />
-       </div> */}
        <div className="form-group">
          <label htmlFor="rating">Rating</label>
          <input
