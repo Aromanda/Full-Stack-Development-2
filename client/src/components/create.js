@@ -43,8 +43,9 @@ export default function Create() {
  
  // This following section will display the form that takes the input from the user.
  return (
-   <div>
-     <h3>Create New Agents</h3>
+   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    < div style={{ width: '400px', border: '1px solid #ccc', padding: '20px' }}>
+     <h3 style={{ textAlign: 'center', color: 'red', marginBottom: '40px' }}>Create New Agents</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="first_name">First Name</label>
@@ -154,6 +155,7 @@ export default function Create() {
          />
        </div>
      </form>
+   </div>
    </div>
  );
 }
