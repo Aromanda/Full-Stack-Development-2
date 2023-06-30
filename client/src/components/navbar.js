@@ -28,16 +28,16 @@ export default function Navbar() {
        </button>
  
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul className="navbar-nav ml-auto">
-         {location.pathname !== '/' && (
-           <li className="nav-item">
-             <NavLink className="nav-link" to="/create">
-               Create Agents
-             </NavLink>
-           </li> 
-         )}
-         </ul>
-       </div>
+          <ul className="navbar-nav ml-auto">
+            {(location.pathname !== '/' && location.pathname !== '/error') && (
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/create">
+                  Create Agents
+                </NavLink>
+              </li>
+            )}
+          </ul>
+        </div>
      </nav>
    </div>
  );
