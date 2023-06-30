@@ -7,7 +7,7 @@ export default function Error() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 3000); 
+    }, 5000); 
 
     return () => clearTimeout(timer); 
   }, [navigate]);
