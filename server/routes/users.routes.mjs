@@ -30,8 +30,11 @@ router.post("/", async (req, res) => {
   let collection = await db.collection("users");
   let result = await collection.findOne(newDocument);
 
-  if (!result) res.send("Not found").status(404);
-  else res.send(result).status(204);
+  if (!result) {
+    res.status(404).json("Not found");
+  } else {
+    res.sendStatus(204);
+  }
 });
 
 // This section will help you update a record by id.
