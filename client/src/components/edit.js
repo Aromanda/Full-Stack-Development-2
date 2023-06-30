@@ -71,8 +71,9 @@ export default function Edit() {
  
  // This following section will display the form that takes input from the user to update the data.
  return (
-   <div>
-     <h3>Update Agents</h3>
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ width: '400px', border: '1px solid #ccc', padding: '20px' }}>
+      <h3 style={{ textAlign: 'center', color:'red', marginBottom:'20px' }}>Create New Agents</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="first_name">Fisrt Name: </label>
@@ -184,6 +185,7 @@ export default function Edit() {
          />
        </div>
      </form>
+   </div>
    </div>
  );
 }
