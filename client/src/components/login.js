@@ -48,36 +48,57 @@ export default function Login() {
     
     // This following section will display the form that takes input from the user to update the data.
     return (
-        <Form onSubmit={onSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              value={form.email}
-              onChange={(e) => updateForm({ email: e.target.value })}
-            />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-    
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              value={form.password}
-              onChange={(e) => updateForm({ password: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            {/* <Form.Check type="checkbox" label="Check me out" /> */}
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+        <div style={{ textAlign: 'center', margin: '20px 500px', border: '2px solid #0D6EFD', padding: '20px' }}>
+  <Form onSubmit={onSubmit}>
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            value={form.email}
+            onChange={(e) => updateForm({ email: e.target.value })}
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+      </div>
+    </div>
+
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={(e) => updateForm({ password: e.target.value })}
+          />
+        </Form.Group>
+      </div>
+    </div>
+
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          {/* <Form.Check type="checkbox" label="Check me out" /> */}
+        </Form.Group>
+      </div>
+    </div>
+
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </div>
+    </div>
+  </Form>
+</div>
+
       );
     }
   
