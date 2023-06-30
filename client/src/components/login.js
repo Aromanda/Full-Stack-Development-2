@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
  
 export default function Login() {
     const [form, setForm] = useState({
@@ -30,12 +30,12 @@ export default function Login() {
           },
           body: JSON.stringify(form),
         });
-  
-        if (response.ok) {
+        if (response.status === 404) {
+            navigate("/error");
+        } else if (response.ok) {
           const data = await response.json();
-  
           if (data === "Not found") {
-            // window.alert("User not found");
+            window.alert("User not found");
             navigate("/error");
           } else {
             setForm({ email: "", password: "" });
