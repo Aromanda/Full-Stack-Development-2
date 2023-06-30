@@ -35,10 +35,11 @@ export default function Login() {
           const data = await response.json();
   
           if (data === "Not found") {
-            window.alert("User not found");
+            // window.alert("User not found");
+            navigate("/error");
           } else {
             setForm({ email: "", password: "" });
-            navigate("/");
+            navigate("/recordList");
           }
         } else {
           throw new Error("Request failed with status: " + response.status);
@@ -74,7 +75,7 @@ export default function Login() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+            {/* <Form.Check type="checkbox" label="Check me out" /> */}
           </Form.Group>
           <Button variant="primary" type="submit">
             Submit
