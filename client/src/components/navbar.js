@@ -4,10 +4,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
  
 // We import NavLink to utilize the react router.
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
  
 // Here, we display our Navbar
 export default function Navbar() {
+  const location = useLocation();
  return (
    <div>
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,11 +29,13 @@ export default function Navbar() {
  
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
          <ul className="navbar-nav ml-auto">
+         {location.pathname !== '/' && (
            <li className="nav-item">
              <NavLink className="nav-link" to="/create">
                Create Agents
              </NavLink>
-           </li>
+           </li> 
+         )}
          </ul>
        </div>
      </nav>
